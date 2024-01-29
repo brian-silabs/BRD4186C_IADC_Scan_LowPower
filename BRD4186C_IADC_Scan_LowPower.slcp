@@ -1,0 +1,38 @@
+# Silicon Labs Project Configuration Tools: slcp, v0, Component selection file.
+project_name: BRD4186C_IADC_Scan_LowPower
+label: BRD4186C_IADC_Scan_LowPower
+description: |
+  This example project shows an empty configuration that can be used as a starting point to add components and functionality.
+category: Example|Platform
+filter:
+- name: Device Type
+  value: [SoC]
+- name: MCU
+  value: [32-bit MCU]
+- name: Project Difficulty
+  value: [Beginner]
+package: platform
+quality: production
+source:
+- {path: app.c}
+- {path: main.c}
+include:
+- path: ''
+  file_list:
+  - {path: app.h}
+sdk: {id: gecko_sdk, version: 4.3.2}
+toolchain_settings: []
+component:
+- {id: EFR32MG24B210F1536IM48}
+- {id: emlib_iadc}
+- {id: emlib_letimer}
+- {id: sl_system}
+- {id: emlib_ldma}
+- {id: device_init}
+- {id: brd4002a}
+- {id: brd4186c}
+- {id: emlib_prs}
+define:
+- {name: DEBUG_EFM}
+ui_hints: {}
+
